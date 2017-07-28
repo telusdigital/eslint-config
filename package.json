@@ -1,0 +1,39 @@
+{
+  "version": "1.0.0",
+  "name": "@telusdigital/eslint-config",
+  "description": "Provides TELUS's `.eslintrc` as an extensible shared config",
+  "homepage": "https://github.com/telusdigital/eslint-config",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/telusdigital/eslint-config.git"
+  },
+  "main": "index.js",
+  "license": "ISC",
+  "keywords": [
+    "eslint",
+    "eslintconfig",
+    "config",
+    "airbnb",
+    "javascript",
+    "styleguide"
+  ],
+  "engines": {
+    "node": ">=4"
+  },
+  "files": [
+    "index.js",
+    ".eslintrc"
+  ],
+  "bugs": {
+    "url": "https://github.com/telusdigital/eslint-config/issues"
+  },
+  "dependencies": {
+    "eslint-config-airbnb": "^15.1.0"
+  },
+  "peerDependencies": {
+    "eslint": "^4.3.0",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-jsx-a11y": "^6.0.2",
+    "eslint-plugin-react": "^7.0.0"
+  }
+}
