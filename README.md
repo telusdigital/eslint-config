@@ -2,7 +2,7 @@
 
 > Provides TELUS's `.eslintrc` as an extensible shared config.
 
-> We inhert from the excellent [Airbnb ESLint config](https://github.com/airbnb/javascript/tree/master/packages/@telusdigital/eslint-config-airbnb) and introduce some more strict requirements.
+> We inherit from the excellent [Airbnb ESLint config](https://github.com/airbnb/javascript/tree/master/packages/@telusdigital/eslint-config-airbnb) and introduce some more strict requirements.
 
 ## Usage
 
@@ -16,7 +16,7 @@ If you use yarn, run `yarn add --dev @telusdigital/eslint-config-base eslint-plu
   yarn info "@telusdigital/eslint-config@latest" peerDependencies
   ```
 
-  You can either install all the peer dependencies manually, or use the [install-peerdeps](https://github.com/nathanhleung/install-peerdeps) cli tool.
+  You can either install all the peer dependencies manually or use the [install-peerdeps](https://github.com/nathanhleung/install-peerdeps) cli tool.
 
   ```sh
   yarn install -g install-peerdeps
