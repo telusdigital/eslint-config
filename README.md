@@ -19,7 +19,7 @@ If you use yarn, run `yarn add --dev @telusdigital/eslint-config-base eslint-plu
   You can either install all the peer dependencies manually or use the [install-peerdeps](https://github.com/nathanhleung/install-peerdeps) cli tool.
 
   ```sh
-  yarn install -g install-peerdeps
+  yarn global add install-peerdeps
   install-peerdeps --dev @telusdigital/eslint-config
   ```
 
