@@ -3,8 +3,12 @@ module.exports = {
   plugins: [
     'import',
     'jsx-a11y',
-    'react'
+    'react',
+    'jest'
   ],
+  env: {
+    'jest/globals': true
+  },
   rules: {
     'arrow-body-style': 'off',
     'class-methods-use-this': 'off',
