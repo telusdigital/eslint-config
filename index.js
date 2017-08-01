@@ -7,7 +7,8 @@ module.exports = {
     'jest'
   ],
   env: {
-    'jest/globals': true
+    'jest/globals': true,
+    'browser': true
   },
   rules: {
     'arrow-body-style': 'off',
