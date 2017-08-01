@@ -1,5 +1,5 @@
 {
-  "version": "1.0.1",
+  "version": "1.1.0",
   "name": "@telusdigital/eslint-config",
   "description": "Provides TELUS's `.eslintrc` as an extensible shared config",
   "homepage": "https://github.com/telusdigital/eslint-config",
