@@ -21,6 +21,8 @@ module.exports = {
     'no-alert': 'error',
     'no-console': 'error',
     'no-underscore-dangle': 'off',
+    'operator-linebreak': 2,
+    'padded-blocks': 2,
     semi: ['error', 'never'],
     quotes: ['error', 'single'],
     'react/display-name': 'error',
