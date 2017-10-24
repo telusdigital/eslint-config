@@ -2,7 +2,7 @@
 
 > Provides TELUS's `.eslintrc` as an extensible shared config.
 
-> We inherit from the excellent [Airbnb ESLint config](https://github.com/airbnb/javascript/tree/master/packages/@telusdigital/eslint-config-airbnb) and introduce some more strict requirements.
+> We inherit from the excellent [Airbnb ESLint config](https://github.com/airbnb/javascript/tree/master/packages/eslint-config-airbnb) and introduce some more strict requirements.
 
 ## Usage
 
