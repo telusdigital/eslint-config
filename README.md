@@ -8,7 +8,7 @@
 
 Our default export contains all of our ESLint rules, including ECMAScript 6+ and React. It requires `eslint`, `eslint-plugin-import`, `eslint-plugin-react`, and `eslint-plugin-jsx-a11y`.
 
-If you use yarn, run `yarn add --dev @telusdigital/eslint-config-base eslint-plugin-import eslint-plugin-react eslint-plugin-jsx-a11y`.
+If you use yarn, run `yarn add --dev @telusdigital/eslint-config eslint-plugin-import eslint-plugin-react eslint-plugin-jsx-a11y`.
 
 If you use Docker for local development, you would have to run the ESLint fix with `yarn` with the command line, through your `package.json`, before you build the container. Your build will break if you try to run ESLint fix through Docker.
 
