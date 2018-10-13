@@ -12,11 +12,11 @@ commands:
     steps:
       - run:
           name: Setup Container
-          command: "apk add --update --no-cache ca-certificates git openssh g++ make python"
+          command: apk add --update --no-cache ca-certificates git openssh g++ make python
 
       - run:
           name: Install npx Utilities
-          command: npm install --global semantic-release david editorconfig-checker eslint npm-run-all node-release-lines
+          command: npm install --unsafe-perm --global semantic-release david editorconfig-checker eslint npm-run-all node-release-lines
 
   persist:
     steps:
