@@ -1,15 +1,16 @@
 {
   "version": "1.2.0",
-  "name": "@telusdigital/eslint-config",
+  "name": "@telus/eslint-config",
   "description": "TELUS Flavour ESLint config",
-  "homepage": "https://github.com/telusdigital/eslint-config",
+  "homepage": "https://github.com/telus/eslint-config",
   "repository": {
     "type": "git",
-    "url": "https://github.com/telusdigital/eslint-config.git"
+    "url": "https://github.com/telus/eslint-config.git"
   },
+  "license": "MIT",
   "main": "index.js",
-  "license": "ISC",
   "keywords": [
+    "telus",
     "eslint",
     "eslintconfig",
     "config",
@@ -24,16 +25,16 @@
     "index.js"
   ],
   "bugs": {
-    "url": "https://github.com/telusdigital/eslint-config/issues"
+    "url": "https://github.com/telus/eslint-config/issues"
+  },
+  "scripts": {
+    "postinstall": "install-peerdeps -o -g eslint-config-airbnb",
+    "lint:deps": "npx david --error404 --errorSCM --errorDepType",
+    "lint:ec": "npx editorconfig-checker .",
+    "lint:js": "npx eslint .",
+    "lint": "npx npm-run-all -p lint:*"
   },
   "dependencies": {
-    "eslint-config-airbnb": "^16.0.0"
-  },
-  "peerDependencies": {
-    "eslint": "^4.10.0",
-    "eslint-plugin-import": "^2.8.0",
-    "eslint-plugin-jest": "^21.2.0",
-    "eslint-plugin-jsx-a11y": "^6.0.2",
-    "eslint-plugin-react": "^7.4.0"
+    "install-peerdeps": "^1.9.0"
   }
 }

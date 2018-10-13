@@ -1,4 +1,6 @@
-# ESLint Config [![version][npm-version]][npm-url] [![License][license-image]][license-url]
+# ESLint Config
+
+[![version][npm-image]][npm-url] [![Build Status][circle-image]][circle-url]
 
 > TELUS Flavour ESLint [config][shared-config].
 
@@ -6,52 +8,49 @@
 
 ## Usage
 
-Our default export contains all of our ESLint rules, including ECMAScript 6+ and React. It requires `eslint`, `eslint-plugin-import`, `eslint-plugin-react`, and `eslint-plugin-jsx-a11y`.
+#### 1. add to `.eslintrc`
 
-If you use yarn, run `yarn add --dev @telusdigital/eslint-config eslint-plugin-import eslint-plugin-react eslint-plugin-jsx-a11y`.
-
-If you use Docker for local development, you would have to run the ESLint fix with `yarn` with the command line, through your `package.json`, before you build the container. Your build will break if you try to run ESLint fix through Docker.
-
-1. Install the correct versions of each package, which are listed by the command:
-
-  ```sh
-  yarn info "@telusdigital/eslint-config@latest" peerDependencies
-  ```
-
-  You can either install all the peer dependencies manually or use the [install-peerdeps][install-peer-deps] cli tool.
-
-  ```sh
-  yarn global add install-peerdeps
-  install-peerdeps --dev @telusdigital/eslint-config
-  ```
-
-  The cli will produce and run a command like:
-
-  ```sh
-  yarn install --save-dev @telusdigital/eslint-config eslint@^#.#.# eslint-plugin-jsx-a11y@^#.#.# eslint-plugin-import@^#.#.# eslint-plugin-react@^#.#.#
-  ```
-
-2. Add to your `.eslintrc`
-
-```json
+```
 {
-  "extends": "@telusdigital/eslint-config"
+  "extends": "@telus/eslint-config"
 }
 ```
 
+#### 2. install globally
+
+```bash
+npm install -g eslint @telus/eslint-config
+```
+
+#### 3. run!
+
+##### cli
+
+```bash
+npx eslint .
+```
+
+##### git hooks
+
+```bash
+echo -e '#!/bin/bash\nnpx eslint .' > .git/hooks/pre-commit && chmod +x .git/hooks/pre-commit
+```
+
+##### editors
+
+editors with built-in `eslint` features, _(e.g. [Visual Studio Code][vs-code])_ usually depend on globally installed packages 
+
 ---
-> :copyright: [TELUS digital](https://labs.telus.com/)  · 
-> License: [ISC][license-url]  · 
-> Github: [@telusdigital](https://github.com/telusdigital)  · 
+> Github: [@telus](https://github.com/telus) &bull; 
 > Twitter: [@telusdigital](https://twitter.com/telusdigital)
 
-[license-url]: http://choosealicense.com/licenses/isc/
-[license-image]: https://img.shields.io/github/license/telusdigital/eslint-config.svg?style=flat-square
+[circle-url]: https://circleci.com/gh/telus/eslint-config
+[circle-image]: https://img.shields.io/circleci/project/github/telus/eslint-config/master.svg?style=for-the-badge&logo=circleci
 
-[npm-url]: https://www.npmjs.com/package/@telusdigital/eslint-config
-[npm-version]: https://img.shields.io/npm/v/@telusdigital/eslint-config.svg?style=flat-square
-[npm-downloads]: https://img.shields.io/npm/dm/@telusdigital/eslint-config.svg?style=flat-square
+[npm-url]: https://www.npmjs.com/package/@telus/eslint-config
+[npm-image]: https://img.shields.io/npm/v/@telus/eslint-config.svg?style=for-the-badge&logo=npm
 
 [eslint-config-airbnb]: https://github.com/airbnb/javascript/tree/master/packages/eslint-config-airbnb
 [shared-config]: https://eslint.org/docs/developer-guide/shareable-configs
 [install-peerdeps]: https://github.com/nathanhleung/install-peerdeps
+[vs-code]: https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint
