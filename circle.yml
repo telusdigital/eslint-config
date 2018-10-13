@@ -18,6 +18,7 @@ commands:
           name: Install npx Utilities
           command: |
             npm install --unsafe-perm --global \
+              @telus/eslint-config \
               @telus/semantic-release-config \
               david \
               editorconfig-checker \
