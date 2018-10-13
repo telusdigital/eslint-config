@@ -22,7 +22,6 @@ commands:
               david \
               editorconfig-checker \
               eslint \
-              node-release-lines \
               npm-run-all \
               semantic-release
 
