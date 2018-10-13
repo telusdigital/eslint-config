@@ -28,10 +28,17 @@
     "url": "https://github.com/telus/eslint-config/issues"
   },
   "scripts": {
-    "postinstall": "npx install-peerdeps -o -g eslint-config-airbnb",
+    "postinstall": "npx install-peerdeps -o -g @telus/eslint-config",
     "lint:deps": "npx david --error404 --errorSCM --errorDepType",
     "lint:ec": "npx editorconfig-checker .",
     "lint:js": "npx eslint .",
     "lint": "npx npm-run-all -p lint:*"
+  },
+  "peerDependencies": {
+    "eslint": "^5.7.0",
+    "eslint-plugin-import": "2.14.0",
+    "eslint-plugin-jest": "21.24.1",
+    "eslint-plugin-jsx-a11y": "^6.1.2",
+    "eslint-plugin-react": "^7.11.1"
   }
 }
