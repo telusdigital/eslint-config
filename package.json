@@ -1,5 +1,5 @@
 {
-  "version": "1.2.0",
+  "version": "1.3.0",
   "name": "@telus/eslint-config",
   "description": "TELUS Flavour ESLint config",
   "homepage": "https://github.com/telus/eslint-config",
@@ -28,13 +28,10 @@
     "url": "https://github.com/telus/eslint-config/issues"
   },
   "scripts": {
-    "postinstall": "install-peerdeps -o -g eslint-config-airbnb",
+    "postinstall": "npx install-peerdeps -o -g eslint-config-airbnb",
     "lint:deps": "npx david --error404 --errorSCM --errorDepType",
     "lint:ec": "npx editorconfig-checker .",
     "lint:js": "npx eslint .",
     "lint": "npx npm-run-all -p lint:*"
-  },
-  "dependencies": {
-    "install-peerdeps": "^1.9.0"
   }
 }
