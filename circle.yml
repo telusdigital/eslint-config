@@ -12,11 +12,19 @@ commands:
     steps:
       - run:
           name: Setup Container
-          command: apk add --update --no-cache ca-certificates git openssh g++ make python
+          command: apk add --update --no-cache ca-certificates git openssh
 
       - run:
           name: Install npx Utilities
-          command: npm install --unsafe-perm --global semantic-release david editorconfig-checker eslint npm-run-all node-release-lines
+          command: |
+            npm install --unsafe-perm --global \
+              @telus/semantic-release-config \
+              david \
+              editorconfig-checker \
+              eslint \
+              node-release-lines \
+              npm-run-all \
+              semantic-release
 
   persist:
     steps:
