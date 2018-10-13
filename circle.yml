@@ -22,16 +22,8 @@ commands:
     steps:
       - attach_workspace: { at: "." }
 
-  npmrc:
-    steps:
-      - run:
-          name: Setup .npmrc
-          command: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" > ~/.npmrc
-
   install:
     steps:
-      - npmrc
-
       - run:
           name: Install dependencies
           command: npm ci
@@ -48,6 +40,7 @@ jobs:
   lint:
     executor: app
     steps:
+      - setup
       - attach
       - run: npm run lint
 
@@ -55,7 +48,6 @@ jobs:
     executor: app
     steps:
       - setup
-      - npmrc
       - attach
       - run: npx semantic-release
 
