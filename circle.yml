@@ -2,64 +2,36 @@ version: 2.1
 
 executors:
   app:
-    working_directory: /src
+    working_directory: ~/src
 
     docker:
-      - image: node:alpine
+      - image: telusops/build-essential:latest
 
 commands:
-  setup:
-    steps:
-      - run:
-          name: Setup Container
-          command: apk add --update --no-cache ca-certificates git openssh
-
-      - run:
-          name: Install npx Utilities
-          command: |
-            npm install --unsafe-perm --global \
-              @telus/eslint-config \
-              @telus/semantic-release-config \
-              david \
-              editorconfig-checker \
-              eslint \
-              npm-run-all \
-              semantic-release
-
   persist:
     steps:
-      - persist_to_workspace: { root: /src, paths: . }
+      - persist_to_workspace: { root: ~/src, paths: . }
 
   attach:
     steps:
       - attach_workspace: { at: "." }
 
-  install:
-    steps:
-      - run:
-          name: Install dependencies
-          command: npm ci
-
 jobs:
   build:
     executor: app
     steps:
-      - setup
       - checkout
-      - install
       - persist
 
   lint:
     executor: app
     steps:
-      - setup
       - attach
       - run: npm run lint
 
   release:
     executor: app
     steps:
-      - setup
       - attach
       - run: npx semantic-release
 
