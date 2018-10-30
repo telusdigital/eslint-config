@@ -2,15 +2,14 @@
 
 [![version][npm-image]][npm-url] [![Build Status][circle-image]][circle-url]
 
-> TELUS Flavour ESLint [config][shared-config].
-
+> TELUS Flavour ESLint [config][shared-config].  
 > We inherit from the excellent [Airbnb ESLint config][eslint-config-airbnb] and introduce some more strict requirements.
 
 ## Usage
 
 #### 1. add to `.eslintrc`
 
-```
+```json
 {
   "extends": "@telus/eslint-config"
 }
@@ -52,5 +51,4 @@ editors with built-in `eslint` features, _(e.g. [Visual Studio Code][vs-code])_ 
 
 [eslint-config-airbnb]: https://github.com/airbnb/javascript/tree/master/packages/eslint-config-airbnb
 [shared-config]: https://eslint.org/docs/developer-guide/shareable-configs
-[install-peerdeps]: https://github.com/nathanhleung/install-peerdeps
 [vs-code]: https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint
