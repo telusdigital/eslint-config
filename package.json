@@ -32,6 +32,7 @@
     "lint:deps": "npx david --error404 --errorSCM --errorDepType",
     "lint:ec": "npx editorconfig-checker .",
     "lint:js": "npx eslint .",
+    "lint:md": "npx remark --quiet --frail .",
     "lint": "npx npm-run-all -p lint:*"
   },
   "peerDependencies": {
