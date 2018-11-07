@@ -28,7 +28,7 @@
     "url": "https://github.com/telus/eslint-config/issues"
   },
   "scripts": {
-    "postinstall": "npx install-peerdeps --only-peers --global @telus/eslint-config",
+    "postinstall": "npx install-group peer --package @telus/eslint-config --global",
     "lint:deps": "npx david --error404 --errorSCM --errorDepType",
     "lint:ec": "npx editorconfig-checker .",
     "lint:js": "npx eslint .",
