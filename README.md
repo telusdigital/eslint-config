@@ -15,10 +15,11 @@
 }
 ```
 
-#### 2. install globally
+#### 2. install
 
 ```bash
-npm install -g eslint @telus/eslint-config
+npm install eslint @telus/eslint-config
+npx install-group peer --package @telus/eslint-config --no-save
 ```
 
 #### 3. run!
