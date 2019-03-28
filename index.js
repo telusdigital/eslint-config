@@ -21,7 +21,6 @@ module.exports = {
     'no-alert': 'error',
     'no-console': 'error',
     'no-underscore-dangle': 'off',
-    'space-before-function-paren': ['error', 'always'],
     'padded-blocks': 'error',
     semi: ['error', 'never'],
     quotes: ['error', 'single'],
