@@ -35,7 +35,7 @@
     "lint": "npx npm-run-all -p lint:*"
   },
   "peerDependencies": {
-    "eslint": "^5.15.3",
+    "eslint": "^6.0.0",
     "eslint-config-airbnb": "^17.1.0",
     "eslint-plugin-import": "^2.16.0",
     "eslint-plugin-jest": "^22.4.1",
