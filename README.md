@@ -1,5 +1,9 @@
 # ESLint Config
 
+## Notice
+
+This package is no longer maintained. Please use [telus-standard] (https://github.com/telus/telus-standard) with TELUS specific linting and a11y rules.
+
 [![version][npm-image]][npm-url] [![Build Status][circle-image]][circle-url]
 
 > TELUS Flavour ESLint [config][shared-config].  
